@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 
@@ -32,7 +33,7 @@ public class Main {
         }
         System.out.println(name3);
 
-        Collections.sort(name3, (a, b) -> Integer.compare(a.length(), b.length()));
+        Collections.sort(name3, Comparator.comparingInt(String::length));
 
         System.out.println(name3);
 
